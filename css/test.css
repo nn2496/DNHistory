@@ -1,0 +1,7 @@
+#gnb {width:250px; background:#ccc;}
+#gnb > li {display:inline-block;}
+#gnb > li > a {display:block; line-height:25px; width:80px; text-align:center;}
+#gnb > li.on a {background:#777; color:#fff;}
+#gnb li ul {position:absolute; width:80px; height:0; overflow:hidden;}
+#gnb li.on ul {height:auto; background:#777;}
+#gnb li ul li a {margin:3px 0 3px 10px; color:#fff;}

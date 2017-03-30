@@ -1,0 +1,17 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+body{
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+@font-face{
+    font-family:'yss';
+    src: url('../font/yss-regular.eot?#iefix') format('embedded-opentype'),
+    url('../font/yss-regular.woff') format('woff');
+    font-weight:normal;
+    font-style:normal;
+}
+.main-visual{
+    font-family:'yss', sans-serif;
+    font-size:50px;
+}

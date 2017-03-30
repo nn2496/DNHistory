@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/baekje.css">
+  <script src="../js/lib/jquery-3.1.1.js"></script>
+  <script src="../js/turn.min.js"></script>
+  <script>
+    $(document).ready(function(){
+
+      $('#magazine').turn({
+        display: 'double',
+        acceleration: true,
+        gradients: !$.isTouch,
+        elevation:50,
+        when: {
+          turned: function(e, page) {
+            /*console.log('Current view: ', $(this).turn('view'));*/
+          }
+        }
+      });
+
+      $(window).bind('keydown', function(e){
+        if (e.keyCode==37)
+          $('#magazine').turn('previous');
+        else if (e.keyCode==39)
+          $('#magazine').turn('next');
+      });
+
+      $('.prev').on('click', function(){
+        $('#magazine').turn('previous');
+      });
+
+      $('.next').on('click', function(){
+        $('#magazine').turn('next');
+      });
+
+
+
+    });
+  </script>
+</head>
+<body>
+
+<div class="arrow-wrap">
+  <span class="prev">prev</span>
+  <span class="next">next</span>
+</div>
+<div class="container">
+
+  <div id="magazine">
+  <!--<div style="background-image:url(../images/_01.png);"></div>-->
+
+  <div class="main">
+    <div class="main-image">메인페이지</div>
+    <h1 class="main-h1">백제문화유산기</h1>
+    <p class="main-h2">찬란한 백제 문화</p>
+    <p class="main-h3">소박하지만 아름다운 백제문화</p>
+  </div>
+
+    <div>
+      <div class="empty-p">빈페이지</div>
+    </div>
+
+    <div class="contents clearfix">
+      <div class="contents-header">
+        <div class="header-text"></div>
+      </div>
+      <div class="contents-list-wrap">
+          <ol class="contents-list">
+            <li class="contents-list-depth1-item">
+              <a href="#" data-page="1" class="contents-list-depth1-link">1. 시작하며
+                <em>&middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp;  p.1~2 </em>
+              </a>
+            </li>
+
+            <li class="contents-list-depth1-item">
+              <a href="#" data-page="3" class="contents-list-depth1-link">2. 백제의 유산</a>
+
+              <ol>
+                <li class="contents-list-depth2-item">
+                  <a href="#" data-page="3" class="contents-list-depth2-link">
+                    미륵사지
+                    <em>&middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp;  p.3~5 </em>
+                  </a>
+                </li>
+                <li class="contents-list-depth2-item">
+                  <a href="#" data-page="6" class="contents-list-depth2-link">
+                    왕궁리유적
+                    <em>&middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp;  p.6 </em>
+                  </a>
+                </li>
+                <li class="contents-list-depth2-item">
+                  <a href="#" data-page="7" class="contents-list-depth2-link">
+                    부소산성
+                    <em>&middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp;  p.7~10 </em>
+                  </a>
+                </li>
+              </ol>
+            </li>
+
+            <li class="contents-list-depth1-item">
+              <a href="#" data-page="11" class="contents-list-depth1-link">
+                3. 백제관련 테마파크
+              </a>
+                <ol>
+                  <li class="contents-list-depth2-item">
+                    <a href="#" data-page="11" class="contents-list-depth2-link">
+                      서동요테마파크
+                      <em>&middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp;  p.11~14 </em>
+                    </a>
+                  </li>
+                  <li class="contents-list-depth2-item">
+                    <a href="#" data-page="15" class="contents-list-depth2-link">
+                      백제문화단지
+                      <em>&middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp;  p.15~18 </em>
+                    </a>
+                  </li>
+              </ol>
+            </li>
+            <li class="contents-list-depth1-item">
+              <a href="#" data-page="19" class="contents-list-depth1-link">
+                4. 일본의 백제풍 유산
+              </a>
+              <ol>
+                <li class="contents-list-depth2-item">
+                  <a href="#" data-page="19" class="contents-list-depth2-link">
+                    법륭사
+                    <em>&middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp;  p.19~21 </em>
+                  </a>
+                </li>
+                <li class="contents-list-depth2-item">
+                  <a href="#" data-page="22" class="contents-list-depth2-link">
+                    동대사
+                    <em>&middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp;  p.22~23 </em>
+                  </a>
+                </li>
+              </ol>
+            </li>
+            <li class="contents-list-depth1-item">
+              <a href="#" data-page="24" class="contents-list-depth1-link">
+                5. 끝내며
+                <em>&middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp;  p.24~25 </em>
+              </a>
+            </li>
+          </ol>
+        <div class="copyright-page">저작권 & 헌정사</div>
+      </div>
+      <script>
+        $(function(){
+
+          $('.contents-list-depth1-link').on('click', function(){
+
+            var pageNum = $(this).data('page');
+
+            $('#magazine').turn('page', pageNum+5);
+
+          });
+
+          $('.contents-list-depth2-link').on('click', function(){
+
+            var pageNum = $(this).data('page');
+
+            $('#magazine').turn('page', pageNum+5);
+
+          });
+
+
+
+        });
+      </script>
+    </div>
+
+    <div>
+      <div class="empty-p">빈페이지</div>
+    </div>
+
+
+    <div class="start">
+      <div class="start-image">시작하며</div>
+      <div class="start-h1">시작</div>
+    </div>
+
+    <div class="p1">
+      <img src="../images/p01.png" alt="초가집이미지" class="p1-image">
+      <div class="p1-text-wrap">
+        <div class="p1-text">
+          <p class="txt1">우리나라는 유구한 역사와 전통을 자랑한다. 하지만 요새 젊은 사람들은 한국의 아름다움과 미는 관심도 없고 해외에 있는 문화재에만 지대한 관심을 쏟으며 한국에 있는 문화유산들은 가까이 있다는 이유로 찬밥신세이다.</p>
+          <p class="txt2">독도는 우리땅이라 외치고 동북공정은 잘못되었다 말하면서 왜 독도가 우리땅인지 조차 모르는 것이 현실이다. 우리나라에도 유네스코지정 문화유산들이 많이 존재하며 다양한 유적지가 있고 역사와 관련된 다양한 테마파크가 있다. 테마파크나 세트장은 역사에 대해 잘모르더라도 많은 콘텐츠들을 제공하며 많은 볼거리나 놀거리를 제공해준다. 세계의 다양한 문화유산에 관심을 가지는 것도 좋지만 그 전에 우리나라의 문화유산에 관심을 가지는 것이 좋지 않나 생각해본다.</p>
+        </div>
+      </div>
+      <span class="page-number-odd">1</span>
+    </div>
+
+    <div class="p2">
+      <img src="../images/p02.png" alt="부소산성이미지" class="p2-image">
+      <div class="p2-text">
+        <p class="txt1">신라의 문화의 중심지인 경주는 수학여행으로 자주간다. 하지만 백제에 관련된 유적지는 사람들이 잘 찾지 않는다. 백제 문화유산들은 충청도 지역에 많이 있으며 놀이공간을 위해 테마파크와 문화단지또한 만들어져 있으며 일본에 가면 백제의 영향을 많이 받은 아스카문화의 유적지 또한 잘 보존되어있다.</p>
+        <p class="txt2">대부분의 백제유적지는 충청도 지역에 있기때문에 서울에서 2시간 정도면 갈 수 있는 위치에 있기 때문에 따로 휴가로 갈필요 없이 주말 나들이로 한번쯤 가보는게 어떨까 한다.</p>
+      </div>
+      <span class="page-number-even">2</span>
+    </div>
+
+    <div class="p3">
+      <div class="content-wrap">
+        <div class="content-header">
+          <div class="slogan">찬란한 백제문화</div>
+          <p class="subject">백제 관련 테마파크</p>
+        </div>
+        <img src="../images/p03.png" alt="백제문화단지 이미지" class="p3-image">
+        <img src="../images/logo.PNG" alt="로고이미지" class="logo">
+      </div>
+      <div class="p3-text">
+        <p class="txt1">우리나라는 유구한 역사를 갖고 있지만 잦은 외세의 침탈로 인해 많은 문화재가 유실되었다. 하지만 남아있는 유적들은 현대 기술로도구현해내기 힘든 것들도 있다. 현대 건물처럼 세련되진 않지만 바람부는 방향을 고려하고 비가오고 눈이와도 물이세지 않는 안에 있는 문화재가 손실되지않도록 내부에 적절한 습도를 맞출 수 있도록 제작하였다. 과학이 발전한 현대에 옛날과 같은 방식으로 만든다면 구현해내기 힘든 문화재들이다.</p>
+      </div>
+      <span class="page-number-odd">3</span>
+    </div>
+
+
+    <div class="p4">
+      <img src="../images/p04.png" alt="미륵사지 이미지" class="p4-image">
+      <div class="p4-text">
+        <p class="txt1">미륵사지 석탑은 백제 최대의 절이었던 익산 미륵사터에 있는 탑으로 황룡사로 대표되는 신라 화엄 신앙에 대비되는 백제 미륵신앙을 바탕으로 만들어졌다. 7세기 초 백제석탑의 출발점이 되며 아울러 한국탑의 출발점이 되기도하는 석탑이다. 우리나라에 남아 있는 가장 오래되고 커다란 규모를 자랑하는 탑으로, 양식상 목탑에서 석탑으로 이행되는 과정을 충실하게 보여주는 중요한 문화재로 평가받고 있다.</p>
+      </div>
+      <span class="page-number-even">4</span>
+    </div>
+
+    <div class="p5">
+      <img src="../images/p05-1.png" alt="미륵사지 이미지" class="p5-image1">
+      <img src="../images/p05-2.png" alt="미륵사지 이미지" class="p5-image2">
+      <img src="../images/p05-3.png" alt="미륵사지 이미지" class="p5-image3">
+      <div class="p5-text">
+        <p class="txt1">미륵사지터에는 아직 복원중인 석탑이 있다. 석탑복원은 현대 기술로도 오랜시간에 걸쳐 복원이 진행되고 있다. 규모가 크기때문에 시간이 걸린다고도 볼 수 있지만 앞서 복원한 석탑이 논란이 되고있기 때문이기도 하다. 미륵사지 석탑은 한국의 최초석탑으로써 소박하지만 멋스러운 한국의 미가 들어있는 문화재였지만 지나치게 세련되게 복원을 했다. 사진1에서 앞에 보이는 것은 기존에 있던 당간지주이고 뒤쪽에 보이는 것은 복원한 석탑이다. 매끄럽고 세련되게 복원하는 것도 좋지만 오랜 옛날 장인들이 한층 한층 손으로 만들던 아름다움을 재현하는 것이야 말로 진정한의미의 복원이 아닐까 생각된다.</p>
+      </div>
+      <span class="page-number-odd">5</span>
+    </div>
+
+    <div class="p6">
+      <img src="../images/p06-1.png" alt="왕궁리유적 박물관 이미지" class="p6-image1">
+      <img src="../images/p06-2.png" alt="왕궁리유적 박물관 이미지" class="p6-image2">
+      <img src="../images/p06-3.png" alt="왕궁리유적 박물관 이미지" class="p6-image3">
+      <div class="p6-text">
+        <p class="txt1">왕궁리 유적은 미륵사지 석탑과 같은 익산에 있으며 사적 제 408호에 기재되어 있으며 2015년 7월 4일에 유네스코 세계문화유산으로 등재되었다.</p>
+        <p class="txt2">왕궁리 유적 안에서 대형 건물지나 석축, 성토 등을 이용한 대지조성과 후원유구 등의 존재는 다른 지역에서 그 확인해 볼 수 없는 것들이 나오고 있다. 이 것으로 보았을 때 이 유적이 당대에는 백제 최고 위층이 머물던 곳임을 나타내주는 것이라는 추측도 있다. 왕궁리 유적에는 왕궁리 5층 석탑이 있으며 석탑 남쪽에는 왕궁리 유적 전시관도 있다. 전시관에는 유적발굴조사과정에서 확인된 내용 을 소개하고 출토유물을 전시하며 내부에는 약 1,400여점을 소장하고 있다.
+        </p>
+      </div>
+      <span class="page-number-even">6</span>
+    </div>
+
+
+    <div class="p7">
+      <img src="../images/p07.PNG" alt="부소산성 이미지" class="p7-image">
+      <div class="p7-text">
+        <p class="txt1">부소산성은 사람들에게는 생소한 이름이지만 백제의 마지막 도읍이자 낙화암이 위치하고 있으며 백마강의 아름다움을 잘 느낄 수있는 곳이다.</p>
+      </div>
+      <span class="page-number-odd">7</span>
+    </div>
+
+  <div class="p8">
+    <img src="../images/p08.png" alt="부소산성 이미지" class="p8-image">
+    <div class="p8-text clearfix">
+      <p class="txt1">부소산성의 정문인 사비문을 들어서면 백제의 3충신인 '성충' '계백' '흥수' 의 위패와 영정을 모신 삼충사가 나오고 전설로는 왕과 귀족들이 계룡산 연천봉의 일출을 맞으며 태평성대를 빌었다는 영일루, 하루의 국정을 마친후 피로를 푸는 공간인 사자루, 산정상에는 만리창이라고 불리는 군창지, 3년씩 젊어지는 약수가 있다는 전설이 있는 고란사가 있다.</p>
+      <p class="txt2">위에 사진은 백화정으로 백화정에 올라서면 백마강이 보이는데 부여 외곽을 감싸는 백마강이 부소산성으로 흘려드는 풍광이 보이며 소나무들이 병풍처럼 백화정을 감싸고 있다.</p>
+    </div>
+    <span class="page-number-even">8</span>
+  </div>
+
+  <div class="p9">
+    <img src="../images/p09-1.png" alt="낙화암 이미지" class="p9-image1">
+    <img src="../images/p09-2.png" alt="낙화암 이미지" class="p9-image2">
+    <img src="../images/p09-3.png" alt="낙화암 이미지" class="p9-image3">
+    <div class="p9-text">
+      <p class="txt1">백화정에서 좀 더 내려가면 낙화암이 보인다. 백제 멸망당시 나당연합군에 의해 위기에 몰리자 궁녀 삼천명이 바위 위에서 투신해 죽었다고 하였는데 이 바위를 낙화암이라 불렀다. 낙화암은 백마강 절경을 감상하기에 좋은 장소이며 선창작에서 배를 타고 백마강을 가로지르며 백마강의 아름다움을 느낄 수 있는 곳이다.</p>
+    </div>
+    <span class="page-number-odd">9</span>
+  </div>
+
+  <div class="p10">
+    <img src="../images/p10.png" alt="부소산성 이미지" class="p10-image">
+    <div class="p10-text">
+      <p class="txt1">백제에는 왕궁리유적, 미륵사지, 부소산성 외에도 다양하고 많은 유적지가 존재한다. 굳이 무거운 마음으로 딱딱한 역사공부를 하는게 아니더라도 좋은 경치가 있고 선조들이 만들어 놓은 소박하지만 아름다운 문화유산들이 많이 있다. 학교생활, 직장생활에 지쳐 있는 몸과 마음을 가족, 친구 혹인 애인과 함께 아름다운 경치를 보며 힐링할 수 있는 여행을 떠나보는게 어떨까요?</p>
+    </div>
+    <span class="page-number-even pn10">10</span>
+  </div>
+
+  <div class="p11">
+    <div class="content-wrap">
+      <div class="content-header">
+        <div class="slogan">찬란한 백제문화</div>
+        <p class="subject">백제 관련 테마파크</p>
+      </div>
+      <img src="../images/p11.png" alt="백제문화단지 이미지" class="p11-image">
+      <img src="../images/logo.PNG" alt="로고이미지" class="logo">
+    </div>
+    <div class="p11-text">
+      <p class="txt1">앞에서는 백제의 우수한 문화재를 소개했고 이번 파트에서는 백제와 관련된 놀공간 테마파크를 소개하려한다. 각종 사극이나 역사콘텐츠를 통해 역사에 대한 관심은 생겼지만 역사지식이 없는 상태에서 역사 유적지를 가기에는 부담되는 분들이 부담없이 가기 좋은 곳들이 있다. 서동요의 오픈세트장인 서동요 테마파크와 충청도에서 17년간 심여를 기울여 만들어낸 백제문화단지는 부담없이 놀러가기에 좋은 장소가 될 것이다.</p>
+    </div>
+    <span class="page-number-odd">11</span>
+  </div>
+
+  <div class="p12">
+    <img src="../images/p12.png" alt="서동요 테마파크 이미지" class="p12-image">
+    <div class="p12-text">
+      <p class="txt1">서동요 테마파크는 백제무왕과 선화공주의 국경을 초월한 사랑을 극화한 백제역사 드라마 '서동요' 의 오픈세트장으로 3만 3000여㎡의 대지위에 2005년 조성됐다.</p>
+    </div>
+    <span class="page-number-even">12</span>
+  </div>
+
+  <div class="p13">
+    <div class="image-wrap">
+      <img src="../images/p13-1.PNG" alt="서동요 테마파크 이미지" class="p13-image p13-image1 on">
+      <img src="../images/p13-2.PNG" alt="서동요 테마파크 이미지" class="p13-image p13-image2 off">
+      <img src="../images/p13-3.png" alt="서동요 테마파크 이미지" class="p13-image p13-image3 off">
+      <img src="../images/p13-4.png" alt="서동요 테마파크 이미지" class="p13-image p13-image4 off">
+    </div>
+    <div class="btn-wrap btn-wrap-p13">
+      <button type="button" class="btn  btn-p13 btn-p13-1 on">1</button>
+      <button type="button" class="btn  btn-p13 btn-p13-2">2</button>
+      <button type="button" class="btn  btn-p13 btn-p13-3">3</button>
+      <button type="button" class="btn  btn-p13 btn-p13-4">4</button>
+    </div>
+    <div class="p13-text">
+      <p class="txt1">오픈세트장 내에는 백제, 신라왕궁, 왕궁촌, 태학사, 하늘재 마을, 저잣거리 등이 있고 이곳에서 대풍수, 태왕사신기, 계백, 조선총잡이 등 인기드라마가 촬영되기도 했다. 특히 최근 새로운 세상 '조선'을 만들기 위해 몸을 일으킨 여섯 인물의 이야기인 SBS드라마 '육룡이 나르샤' 의 촬용지로 각광받으면서 방문객들이 줄을 잇고 있다. 테마파크는 여러 소품들이 가지런히 놓여져 있고 정돈도 잘되어 있는 것이 특징이다. 왕궁 뿐만아니라 왕궁 밖 서민들의 공간을 잘 만들어져 있으며 무엇보다 언덕진지형이 없어 산책하며 구경하기에 딱 알맞은 곳이다.</p>
+    </div>
+    <span class="page-number-odd pn13">13</span>
+    <script>
+      $(function(){
+
+        function btnOn13($btn, index){
+
+          $btn.siblings('.btn-p13').fadeIn('on');
+          $btn.addClass('on');
+
+          var $fadeImage = $('.p13-image').eq(index);
+
+          $fadeImage.siblings('.p13-image').removeClass('on').addClass('off');
+          $fadeImage.addClass('on').removeClass('off');
+
+        }
+
+        function btnOn17($btn, index){
+
+          $btn.siblings('.btn-p17').fadeIn('on');
+          $btn.addClass('on');
+
+          var $fadeImage = $('.p17-image').eq(index);
+
+          $fadeImage.siblings('.p17-image').removeClass('on').addClass('off');
+          $fadeImage.addClass('on').removeClass('off');
+
+        }
+
+        function btnOn18($btn, index){
+
+          $btn.siblings('.btn-p18').fadeIn('on');
+          $btn.addClass('on');
+
+          var $fadeImage = $('.p18-image').eq(index);
+
+          $fadeImage.siblings('.p18-image').removeClass('on').addClass('off');
+          $fadeImage.addClass('on').removeClass('off');
+
+        }
+
+        $('.btn-p13').on('click',function(){
+
+          console.log(214124);
+
+          var index = $(this).index('.btn-p13');
+
+          btnOn13( $(this), index );
+
+        });
+
+        $('.btn-p17').on('click',function(){
+
+          var index = $(this).index('.btn-p17');
+
+          btnOn17( $(this), index );
+
+        });
+
+        $('.btn-p18').on('click',function(){
+
+          var index = $(this).index('.btn-p18');
+
+          btnOn18( $(this), index );
+
+        });
+
+
+      });
+
+    </script>
+  </div>
+
+  <div class="p14">
+    <img src="../images/p14.png" alt="서동요 테마파크 이미지" class="p14-image">
+    <div class="p14-text">
+      <p class="txt1">서동요 테마파크는 다양한 볼거리가 있다. 드라마 촬영을 위한 다양한 소품들이 있어 연인 혹은 친구들과 갔을 때 재밌게 놀며 즐길 수 있는콘텐츠가 많이 있다.</p>
+    </div>
+    <span class="page-number-even">14</span>
+  </div>
+
+  <div class="p15">
+    <img src="../images/p15.png" alt="백제문화단지 이미지" class="p15-image">
+    <div class="p15-text">
+      <p class="txt1">백제문화단지는 백제역사문화의 우수성을 세계에 알리기 위해17년간 충남 부여군 규암면 합정리에 조선된 백제문화유산의 집합소이다. 백제문화단지의 전체면적은 327만 6,000㎡으로 백제왕궁인 사비궁과 성왕의 명복을 빌기 위한 사찰인 능사, 백제시대의 대표적묘제를 보여주는 고분공원, 계층별 주거유형을 보여주는 생활문화마을, 개국 초기 궁성인 위례성 등으로 이루어져있으며 백제문화의웅장한모습을 제현하였다.</p>
+      <p class="txt2">백제문화단지 안에는 웅장한 모습의 건물들도 있지만 백제역사문화관 이라는 박물관도 있다. 이 박물관 내부에는 백제역사와 문화를 쉽게 보여주는 상설전시실, 백제문화단지 조성 과정을 종합 전시한 건립기념관, 백제 관련 영상물을 상영하는 금동대향로극장 등을 갖추고 있다.</p>
+    </div>
+    <span class="page-number-odd">15</span>
+  </div>
+
+  <div class="p16">
+    <img src="../images/p16.png" alt="백제문화단지 이미지" class="p16-image">
+    <div class="p16-text">
+      <p class="txt1">백제문화단지는 내부에 사비궁, 위례성, 능사 같은 크고 웅장한 건물들을 잘 만들어 놓았다. 입구인 정양문을 지나 들어가게되면 왕궁의 중심인 천정정이 있으며 안쪽에는 왕이 업무를 보던 문사전, 신하들이 업무를 보던 연영전이 있으며 입구부터눈에 띄는 능사5층목탑 등등이 아주 잘 만들어져 있다. 전체면적인 327만 6,000㎡위에 웅장한 백제문화에 흔적이 남아있는 듯 했다.</p>
+      <p class="txt2">사진속에 있는 제형루에 올라서면 단지 전체가 한눈에 들어오는데 그 풍경을 보고있으면 감탄사가 절로나온다.</p>
+      <p class="txt3">백제문화단지에서 돋보이는 곳은 생활문화마을이다. 생활문화마을은 백제 사비시대에 계층별 주거 유형을 보여주는 곳으로 백제 말기의 대표적 무관인 계백장군의집을 재현한 것과 백제시대의 최고 벼슬인 대좌평의 사택지적의 가옥 등을 비롯하여중류계급과 서민계급의 가옥까지 잘 연출해 냈다. 생활문화마을에서는 지게나 절구같은 소품들도 있어 눈으로만 즐기는게 아니라 체험도 함께 할 수 있어 좋다.</p>
+    </div>
+    <span class="page-number-even">16</span>
+  </div>
+
+  <div class="p17">
+    <div>
+      <img src="../images/p17-1.png" alt="백제문화단지 박물관 이미지" class="p17-image1 p17-image on">
+      <img src="../images/p17-2.PNG" alt="백제문화단지 박물관 이미지" class="p17-image2 p17-image off">
+      <img src="../images/p17-3.PNG" alt="백제문화단지 박물관 이미지" class="p17-image3 p17-image off">
+      <img src="../images/p17-4.PNG" alt="백제문화단지 박물관 이미지" class="p17-image4 p17-image off">
+    </div>
+    <div class="btn-wrap btn-wrap-p17">
+      <button type="button" class="btn  btn-p17 btn-p17-1 on">1</button>
+      <button type="button" class="btn  btn-p17 btn-p17-2">2</button>
+      <button type="button" class="btn  btn-p17 btn-p17-3">3</button>
+      <button type="button" class="btn  btn-p17 btn-p17-4">4</button>
+    </div>
+    <div class="p17-text">
+      <p class="txt1">백제역사문화관은 백제 역사 전문 박물관으로 백제역사와 문화의 전반에 대한 자료수집, 보존, 연구, 정보제공 등의 기능을 수행하고 있으며 다양한시각자료를 제공해주기 때문에 쉽게 관람할 수 있는 공간이다.</p>
+    </div>
+    <span class="page-number-odd pn17">17</span>
+    <script>
+      $(function(){
+
+        function btnOn13($btn, index){
+
+          $btn.siblings('.btn-p13').fadeIn('on');
+          $btn.addClass('on');
+
+          var $fadeImage = $('.p13-image').eq(index);
+
+          $fadeImage.siblings('.p13-image').removeClass('on').addClass('off');
+          $fadeImage.addClass('on').removeClass('off');
+
+        }
+
+        function btnOn17($btn, index){
+
+          $btn.siblings('.btn-p17').fadeIn('on');
+          $btn.addClass('on');
+
+          var $fadeImage = $('.p17-image').eq(index);
+
+          $fadeImage.siblings('.p17-image').removeClass('on').addClass('off');
+          $fadeImage.addClass('on').removeClass('off');
+
+        }
+
+        function btnOn18($btn, index){
+
+          $btn.siblings('.btn-p18').fadeIn('on');
+          $btn.addClass('on');
+
+          var $fadeImage = $('.p18-image').eq(index);
+
+          $fadeImage.siblings('.p18-image').removeClass('on').addClass('off');
+          $fadeImage.addClass('on').removeClass('off');
+
+        }
+
+        $('.btn-p13').on('click',function(){
+
+          console.log(214124);
+
+          var index = $(this).index('.btn-p13');
+
+          btnOn13( $(this), index );
+
+        });
+
+        $('.btn-p17').on('click',function(){
+
+          var index = $(this).index('.btn-p17');
+
+          btnOn17( $(this), index );
+
+        });
+
+        $('.btn-p18').on('click',function(){
+
+          var index = $(this).index('.btn-p18');
+
+          btnOn18( $(this), index );
+
+        });
+
+
+      });
+
+    </script>
+  </div>
+
+  <div class="p18">
+    <div>
+      <img src="../images/p18-1.png" alt="백제문화단지 이미지" class="p18-image1 p18-image on">
+      <img src="../images/p18-2.png" alt="백제문화단지 이미지" class="p18-image2 p18-image off">
+      <img src="../images/p18-3.png" alt="백제문화단지 이미지" class="p18-image3 p18-image off">
+      <img src="../images/p18-4.png" alt="백제문화단지 이미지" class="p18-image4 p18-image off">
+    </div>
+    <div class="btn-wrap btn-wrap-p18">
+      <button type="button" class="btn  btn-p18 btn-p18-1 on">1</button>
+      <button type="button" class="btn  btn-p18 btn-p18-2">2</button>
+      <button type="button" class="btn  btn-p18 btn-p18-3">3</button>
+      <button type="button" class="btn  btn-p18 btn-p18-4">4</button>
+    </div>
+    <div class="p18-text">
+      <p class="txt1">제형루에 올라가서 보면 보이는 풍경으로 예
+        쁘고 잘 만들어져 있는 만큼 사시사철 어느시기에 가더라도 이쁜경치를 볼 수 있어 일품이다.</p>
+    </div>
+    <span class="page-number-even">18</span>
+    <script>
+      $(function(){
+
+        function btnOn13($btn, index){
+
+          $btn.siblings('.btn-p13').fadeIn('on');
+          $btn.addClass('on');
+
+          var $fadeImage = $('.p13-image').eq(index);
+
+          $fadeImage.siblings('.p13-image').removeClass('on').addClass('off');
+          $fadeImage.addClass('on').removeClass('off');
+
+        }
+
+        function btnOn17($btn, index){
+
+          $btn.siblings('.btn-p17').fadeIn('on');
+          $btn.addClass('on');
+
+          var $fadeImage = $('.p17-image').eq(index);
+
+          $fadeImage.siblings('.p17-image').removeClass('on').addClass('off');
+          $fadeImage.addClass('on').removeClass('off');
+
+        }
+
+        function btnOn18($btn, index){
+
+          $btn.siblings('.btn-p18').fadeIn('on');
+          $btn.addClass('on');
+
+          var $fadeImage = $('.p18-image').eq(index);
+
+          $fadeImage.siblings('.p18-image').removeClass('on').addClass('off');
+          $fadeImage.addClass('on').removeClass('off');
+
+        }
+
+        $('.btn-p13').on('click',function(){
+
+          console.log(214124);
+
+          var index = $(this).index('.btn-p13');
+
+          btnOn13( $(this), index );
+
+        });
+
+        $('.btn-p17').on('click',function(){
+
+          var index = $(this).index('.btn-p17');
+
+          btnOn17( $(this), index );
+
+        });
+
+        $('.btn-p18').on('click',function(){
+
+          var index = $(this).index('.btn-p18');
+
+          btnOn18( $(this), index );
+
+        });
+
+
+      });
+
+    </script>
+  </div>
+
+    <div class="p19">
+      <div class="content-wrap">
+        <div class="content-header">
+          <div class="slogan">찬란한 백제문화</div>
+          <p class="subject">백제 관련 테마파크</p>
+        </div>
+        <img src="../images/p19.png" alt="백제문화단지 이미지" class="p19-image">
+        <img src="../images/logo.PNG" alt="로고이미지" class="logo">
+      </div>
+      <div class="p19-text">
+        <p class="txt1">고대시대 백제는 일본과 교류를 하며 일본과 외교관계를 맺고 있었다. 일본에게 자신들의 문화를 전파해주고 노동력을 제공받는 등의 교류를 했으며 백제부흥운동 때에도 군사를 보내주어 백제의 멸망을 막아주려 했던 것만 하더라도 돈독한 사이라 추측해 볼 수 있으며 백제 멸망이후 많은 백제 귀족들이 일본으로건너가 일본의 귀족으로 있으며 많은 부분에 도움을 주었다 추측해볼 수 있다.</p>
+      </div>
+      <span class="page-number-odd">19</span>
+    </div>
+
+  <div class="p20">
+    <img src="../images/p20.png" alt="호류지 이미지" class="p20-image">
+    <div class="p20-text">
+      <p class="txt1">일본은 아스카 시대 초기인 6세기경에 불교를 받아들였다. 불교의 공인은 새로운 건축기술의 발전을 가져왔고 이전 시대와는 비교도 되지않을 만큼 장대하고 화려한 불교 건축이 지어졌다.</p>
+      <p class="txt2">사진은 호류지 내부사진으로 호류지는 607년 쇼토쿠 태자가 백제 건축가들에게 의뢰하여 이카루가 왕실 옆에 붙여 창건했으나 670년의 화재로 전소된 것을 재건한 것이다.</p>
+      <p class="txt2">호류지의 서쪽에는 아스카 문화를 대표하는 건축물과 불상, 벽화가 남아있으며 주요건물로는 강당과, 금당, 지붕이 있는 복도인 '카이로' 그리고 5층탑이 있다. 동쪽의 사찰에는 쇼토쿠 태자가 어머니를 위해 건립한 '몽전'이라는 사찰이있다.</p>
+    </div>
+    <span class="page-number-even">20</span>
+  </div>
+
+  <div class="p21">
+    <img src="../images/p21-1.png" alt="호류지 이미지" class="p21-image1">
+    <img src="../images/p21-2.png" alt="호류지 이미지" class="p21-image2">
+    <img src="../images/p21-3.png" alt="호류지 이미지" class="p21-image3">
+    <div class="p21-text">
+      <p class="txt1">우리나라는 잦은 외세의 침입으로 인하여 많은 목재건물
+        들이 불타없어지고 조선시대에는 성리학의 보급으로 억불
+        정책이 이어졌기 때문에 불교와 관련된 문화재가 많이 남아
+        있지 않다. 하지만 일본은 섬나라라는 지리적 이점 덕분에
+        많은 목재건물이 남아있고 보존도 잘되어 있는 상태이다.</p>
+    </div>
+    <span class="page-number-odd">21</span>
+  </div>
+
+  <div class="p22">
+    <img src="../images/p22.png" alt="동대사 이미지" class="p22-image">
+    <div class="p22-text">
+      <p class="txt1">동대사는 일본의 나라를 대표하는 대불사찰이며 세계문화유산으로 유명하다. 동대사 본존의 청동불상은 무게가 452t으로 안으로들어가면 대불의 규모에 압도되어 다른 것을 볼 여유가 없어질 정도 이다. 사실 동대사는 백제보다 신라의 영향을 많이 받은 건물이지만 아스카시대의 문화는 백제의 영향을 많이 받았기 때문에 백제풍의 문화재들도 많이 보인다. 동대사 내부에는 정창원, 이월당, 삼월당 등의 건물들도 아름다움을 뽐내고 있다.</p>
+      <p class="txt2">동대사 앞에는 사슴공원이 조성되어 있다. 신이 사슴을 타고 내려왔다고 해서 사슴을 수행자로 여기며 사슴을 방목하고 있다 한다.우리나라와는 다르게 절 앞에 사슴이 있어 세계문화유산인 것 뿐만아니라 관광지로써의 기능도 함께하고 있었다.</p>
+    </div>
+    <span class="page-number-even">22</span>
+  </div>
+
+  <div class="p23">
+    <img src="../images/p23.png" alt="나라 사슴공원" class="p23-image">
+    <div class="p23-text">
+      <p class="txt1">일본에서는 역사왜곡과 날조로 백제의 영향을 받은 것을 부정하려 하지만 아스카 문화는
+        백제에 의해 많은 영향을 받은 것은 부정할 수 없는 사실이다.</p>
+    </div>
+    <span class="page-number-odd">23</span>
+  </div>
+
+  <div class="p24">
+    <img src="../images/p24.png" alt="백제문화단지 이미지" class="p24-image">
+    <div class="youtube"><iframe width="300" height="170" src="https://www.youtube.com/embed/LuBQ33A9PNI" frameborder="0" allowfullscreen></iframe></div>
+    <div class="p24-text">
+      <p class="txt2">사람들은 역사에 대해 어렵고 재미없어 하며 외울것이 많은 과목이라 생각한다. 하지만 역사는 눈으로 보고 마음으로 느끼는 것이다. 많은 유적지가 있지만 역사 관련된 곳은 재미없다고 생각하여 잘 가보려 하지 않는다.역사관련된 유적지가 가기 부담스럽다면 역사관련 각종 테마파크라도 가보는 것이 어떨까요?역사에 대한 사소한 관심이 하나씩 모여 많은 것들이 바뀔 수 있습니다.</p>
+    </div>
+    <span class="page-number-even pn24">24</span>
+  </div>
+
+  <div class="p25">
+    <div class="p25-text">
+      <h1 class="p25-h1">저작권 & 헌정사</h1>
+      <dl class="p25-item">
+        <dt class="p25-depth1-item">제목</dt>
+        <dd class="p25-depth2-item"><em>백제문화유산기</em> - 문화재 소개를 중심으로</dd>
+        <img src="../images/p25.PNG" alt="초가집이미지" class="p25-image">
+        <dt class="p25-depth1-item constitution">헌 정 사</dt>
+        <dd class="p25-depth2-item references">좀 더 많은 사람들이 역사에 대해 관심을 가졌으면 해서 이 페이지를 만들게 되었는데 괜찮은 곳들을 더 많이 알려드리지 못해서 죄송할 따름입니다. 이 웹을 보고좀 더 많은 사람들이 백제에 관심을 가져줬으면 합니다.</dd>
+        <dt class="p25-depth1-item">참고자료</dt>
+        <dd class="p25-depth2-item">선문대학교 역사문화콘텐츠학과 2014 동계 해외 학술답사록 참조<br>선문대학교 역사문화콘텐츠학과 2016-1 학술답사록 참조</dd>
+      </dl>
+    </div>
+    <span class="page-number-odd">25</span>
+    <p class="copyright">Copyrightⓒ 2016. KIM Do Hee. Dept. of history and culture contents.All rights reserved.</p>
+  </div>
+
+
+</div>
+</div>
+
+
+
+</body>
+
+</html>
